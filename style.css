@@ -135,7 +135,27 @@ html {
     height: 100%;
     object-fit: cover;
     border-radius: 5px 15px 15px 5px;
-    /* Spiney look */
+    /* Async loading: fade-in effect */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Async Image Loading States */
+.cover-img.loading {
+    opacity: 0;
+}
+
+.cover-img.loaded {
+    opacity: 1;
+}
+
+/* Diary image async loading */
+.diary-img.loading {
+    opacity: 0;
+}
+
+.diary-img.loaded {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .cover-text {

@@ -202,31 +202,60 @@ function createBookCard(memory) {
     return card;
 }
 
-// 2. Open Detail Modal
+// 2. Open Detail Modal (Optimistic UI - Instant Feedback)
 function openDetailModal(memory) {
-    // 1. Reset Views
-    // Enforce strict state BEFORE showing modal
+    // 1. Reset Views - Enforce strict state BEFORE showing modal
     viewContent.classList.remove('show-content');
     viewContent.classList.add('hidden');
     viewCover.classList.remove('hidden', 'flipping');
 
-    // 2. Populate Cover Data (The "Front" of the book)
+    // 2. Get Cover Elements
     const coverImage = document.getElementById('cover-image');
     const coverMonth = document.getElementById('cover-month');
     const coverTitle = document.getElementById('cover-title');
+    const coverWrapper = document.querySelector('.cover-wrapper');
 
-    // Safety check if elements exist (they should)
-    if (coverImage) {
-        const color = memory.coverColor || 'blue';
-        coverImage.src = `./assets/cover_${color}.png`;
+    // 3. INSTANT FEEDBACK: Set solid background color FIRST
+    const color = memory.coverColor || 'blue';
+    const colorMap = {
+        'purple': '#4a2c6d',
+        'gold': '#c9a227',
+        'red': '#8b2635',
+        'pink': '#d4638e',
+        'brown': '#5c4033',
+        'green': '#2d5a3d',
+        'blue': '#2c4a7f'
+    };
+    const bgColor = colorMap[color] || '#2c4a7f';
+
+    if (coverWrapper) {
+        coverWrapper.style.backgroundColor = bgColor;
     }
+
+    // 4. Populate text immediately (no blocking)
     if (coverMonth) coverMonth.textContent = memory.date || `Month ${memory.month}`;
     if (coverTitle) coverTitle.textContent = memory.title;
 
-    // 3. Inject "Diary Page" Structure (The "Inside")
-    // Use placeholder service since photos might be missing, and user wants full layout visual.
+    // 5. SHOW MODAL IMMEDIATELY - Don't wait for images!
+    modal.classList.remove('hidden');
+
+    // 6. Load cover image ASYNCHRONOUSLY with fade-in
+    if (coverImage) {
+        coverImage.classList.add('loading'); // Start transparent
+        coverImage.onload = () => {
+            coverImage.classList.remove('loading');
+            coverImage.classList.add('loaded'); // Fade in
+        };
+        coverImage.onerror = () => {
+            // If image fails, just show the solid color (already visible)
+            coverImage.classList.add('loading');
+        };
+        // Set src AFTER modal is visible to trigger async load
+        coverImage.src = `./assets/cover_${color}.png`;
+    }
+
+    // 7. Inject "Diary Page" Structure (The "Inside")
     const placeholderUrl = `https://picsum.photos/400/300?random=${memory.id}`;
-    // Prefer actual photo if available, else placeholder
     const imgSrc = (memory.hasPhoto && memory.photoSrc) ? memory.photoSrc : placeholderUrl;
 
     viewContent.innerHTML = `
@@ -234,31 +263,35 @@ function openDetailModal(memory) {
             <button id="close-btn" class="close-btn">&times;</button>
             <div class="diary-date">${memory.date || 'Unknown Date'}</div>
             <div class="diary-photo">
-                <img src="${imgSrc}" alt="${memory.title}">
+                <img src="${imgSrc}" alt="${memory.title}" class="diary-img loading">
             </div>
             <h3 class="diary-title">${memory.title}</h3>
             <p class="diary-text">${memory.caption}</p>
         </div>
     `;
 
-    // Re-attach Event Listener for the NEW Close Button
+    // 8. Async load diary photo too
+    const diaryImg = viewContent.querySelector('.diary-img');
+    if (diaryImg) {
+        diaryImg.onload = () => {
+            diaryImg.classList.remove('loading');
+            diaryImg.classList.add('loaded');
+        };
+    }
+
+    // 9. Re-attach Event Listener for the NEW Close Button
     const newCloseBtn = viewContent.querySelector('#close-btn');
     if (newCloseBtn) {
         newCloseBtn.addEventListener('click', closeModal);
     }
 
-    // 4. Set separation of concerns - Listen for the flip
-    // Remove old listeners to prevent duplicates if any (simple approach: onlick assignment)
-    const coverWrapper = document.querySelector('.cover-wrapper');
+    // 10. Set up flip interaction
     if (coverWrapper) {
         coverWrapper.onclick = (e) => {
             e.stopPropagation();
             revealContent();
         };
     }
-
-    // Only show modal AFTER all states are set
-    modal.classList.remove('hidden');
 }
 
 // 2b. The Reveal Animation
