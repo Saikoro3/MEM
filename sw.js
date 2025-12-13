@@ -8,14 +8,14 @@ const ASSETS_TO_CACHE = [
     './style.css',
     './app.js',
     './manifest.json',
-    './assets/bookshelf_bg.jpg',
-    './assets/cover_purple.png',
-    './assets/cover_gold.png',
-    './assets/cover_red.png',
-    './assets/cover_pink.png',
-    './assets/cover_brown.png',
-    './assets/cover_green.png',
-    './assets/cover_blue.png'
+    './assets/bookshelf_bg.webp',
+    './assets/cover_purple.webp',
+    './assets/cover_gold.webp',
+    './assets/cover_red.webp',
+    './assets/cover_pink.webp',
+    './assets/cover_brown.webp',
+    './assets/cover_green.webp',
+    './assets/cover_blue.webp'
 ];
 
 // Install Event - Cache essential assets

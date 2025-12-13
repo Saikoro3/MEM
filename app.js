@@ -7,7 +7,7 @@ const memories = [
         date: "April 10, 2025",
         title: "The Beginning",
         coverColor: "purple",
-        coverImage: "./assets/cover_purple.png",
+        coverImage: "./assets/cover_purple.webp",
         hasPhoto: false,
         caption: "A fresh start. The pages are blank, waiting to be filled with new stories."
     },
@@ -17,7 +17,7 @@ const memories = [
         date: "May 15, 2025",
         title: "Golden Hour",
         coverColor: "gold",
-        coverImage: "./assets/cover_gold.png",
+        coverImage: "./assets/cover_gold.webp",
         hasPhoto: true,
         photoSrc: "./assets/may_memory.jpg",
         caption: "The sunlight hit the leaves just right. A moment of pure gold."
@@ -28,7 +28,7 @@ const memories = [
         date: "June 21, 2025",
         title: "Passion",
         coverColor: "red",
-        coverImage: "./assets/cover_red.png",
+        coverImage: "./assets/cover_red.webp",
         hasPhoto: false,
         caption: "Summer heat and vibrant energy. The world feels alive."
     },
@@ -38,7 +38,7 @@ const memories = [
         date: "July 04, 2025",
         title: "Blossom",
         coverColor: "pink",
-        coverImage: "./assets/cover_pink.png",
+        coverImage: "./assets/cover_pink.webp",
         hasPhoto: true,
         photoSrc: "./assets/july_memory.jpg",
         caption: "Soft petals and warm breezes. Everything is blooming."
@@ -49,7 +49,7 @@ const memories = [
         date: "August 12, 2025",
         title: "Earth & Sky",
         coverColor: "brown",
-        coverImage: "./assets/cover_brown.png",
+        coverImage: "./assets/cover_brown.webp",
         hasPhoto: false,
         caption: "Grounding moments. Connecting with the roots of who we are."
     },
@@ -59,7 +59,7 @@ const memories = [
         date: "Sept 23, 2025",
         title: "Growth",
         coverColor: "green",
-        coverImage: "./assets/cover_green.png",
+        coverImage: "./assets/cover_green.webp",
         hasPhoto: true,
         photoSrc: "./assets/sept_memory.jpg",
         caption: "Steady progress. Like a vine climbing towards the light."
@@ -70,7 +70,7 @@ const memories = [
         date: "Oct 31, 2025",
         title: "Deep Dive",
         coverColor: "blue",
-        coverImage: "./assets/cover_blue.png",
+        coverImage: "./assets/cover_blue.webp",
         hasPhoto: false,
         caption: "Reflecting on the depths. Calm waters run deep."
     },
@@ -80,7 +80,7 @@ const memories = [
         date: "Nov 28, 2025",
         title: "Gratitude",
         coverColor: "purple",
-        coverImage: "./assets/cover_purple.png",
+        coverImage: "./assets/cover_purple.webp",
         hasPhoto: true,
         photoSrc: "./assets/nov_memory.jpg",
         caption: "Thankful for the journey, the loops, and the returns."
@@ -91,7 +91,7 @@ const memories = [
         date: "Dec 25, 2025",
         title: "Reflection",
         coverColor: "gold",
-        coverImage: "./assets/cover_gold.png",
+        coverImage: "./assets/cover_gold.webp",
         hasPhoto: false,
         caption: "Looking back at the year. A golden ending to a beautiful chapter."
     }
@@ -176,9 +176,9 @@ function createBookCard(memory) {
     // Book Cover Image
     const img = document.createElement('img');
     // Use coverColor property if available, fallback to existing or construct path
-    // Format: ./assets/cover_[color].png
+    // Format: ./assets/cover_[color].webp
     const color = memory.coverColor || 'blue'; // Default fallback
-    img.src = `./assets/cover_${color}.png`; // Ensure extension matches assets (png)
+    img.src = `./assets/cover_${color}.webp`; // Ensure extension matches assets (webp)
     img.alt = memory.title;
 
     // Overlay
@@ -251,7 +251,7 @@ function openDetailModal(memory) {
             coverImage.classList.add('loading');
         };
         // Set src AFTER modal is visible to trigger async load
-        coverImage.src = `./assets/cover_${color}.png`;
+        coverImage.src = `./assets/cover_${color}.webp`;
     }
 
     // 7. Inject "Diary Page" Structure (The "Inside")
