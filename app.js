@@ -1,5 +1,6 @@
 // Data Source
 // Covers: purple, gold, red, pink, brown, green, blue (reusing for remaining months)
+// Gallery arrays contain AVIF scrapbook pages for horizontal scroll viewing
 const memories = [
     {
         id: 1,
@@ -8,8 +9,10 @@ const memories = [
         title: "The Beginning",
         coverColor: "purple",
         coverImage: "./assets/cover_purple.webp",
-        hasPhoto: false,
-        caption: "A fresh start. The pages are blank, waiting to be filled with new stories."
+        gallery: [
+            "./assets/dummy_1.avif",
+            "./assets/dummy_2.avif"
+        ]
     },
     {
         id: 2,
@@ -18,9 +21,10 @@ const memories = [
         title: "Golden Hour",
         coverColor: "gold",
         coverImage: "./assets/cover_gold.webp",
-        hasPhoto: true,
-        photoSrc: "./assets/may_memory.jpg",
-        caption: "The sunlight hit the leaves just right. A moment of pure gold."
+        gallery: [
+            "./assets/dummy_1.avif",
+            "./assets/dummy_2.avif"
+        ]
     },
     {
         id: 3,
@@ -29,8 +33,10 @@ const memories = [
         title: "Passion",
         coverColor: "red",
         coverImage: "./assets/cover_red.webp",
-        hasPhoto: false,
-        caption: "Summer heat and vibrant energy. The world feels alive."
+        gallery: [
+            "./assets/dummy_1.avif",
+            "./assets/dummy_2.avif"
+        ]
     },
     {
         id: 4,
@@ -39,9 +45,10 @@ const memories = [
         title: "Blossom",
         coverColor: "pink",
         coverImage: "./assets/cover_pink.webp",
-        hasPhoto: true,
-        photoSrc: "./assets/july_memory.jpg",
-        caption: "Soft petals and warm breezes. Everything is blooming."
+        gallery: [
+            "./assets/dummy_1.avif",
+            "./assets/dummy_2.avif"
+        ]
     },
     {
         id: 5,
@@ -50,8 +57,10 @@ const memories = [
         title: "Earth & Sky",
         coverColor: "brown",
         coverImage: "./assets/cover_brown.webp",
-        hasPhoto: false,
-        caption: "Grounding moments. Connecting with the roots of who we are."
+        gallery: [
+            "./assets/dummy_1.avif",
+            "./assets/dummy_2.avif"
+        ]
     },
     {
         id: 6,
@@ -60,9 +69,10 @@ const memories = [
         title: "Growth",
         coverColor: "green",
         coverImage: "./assets/cover_green.webp",
-        hasPhoto: true,
-        photoSrc: "./assets/sept_memory.jpg",
-        caption: "Steady progress. Like a vine climbing towards the light."
+        gallery: [
+            "./assets/dummy_1.avif",
+            "./assets/dummy_2.avif"
+        ]
     },
     {
         id: 7,
@@ -71,8 +81,10 @@ const memories = [
         title: "Deep Dive",
         coverColor: "blue",
         coverImage: "./assets/cover_blue.webp",
-        hasPhoto: false,
-        caption: "Reflecting on the depths. Calm waters run deep."
+        gallery: [
+            "./assets/dummy_1.avif",
+            "./assets/dummy_2.avif"
+        ]
     },
     {
         id: 8,
@@ -81,9 +93,10 @@ const memories = [
         title: "Gratitude",
         coverColor: "purple",
         coverImage: "./assets/cover_purple.webp",
-        hasPhoto: true,
-        photoSrc: "./assets/nov_memory.jpg",
-        caption: "Thankful for the journey, the loops, and the returns."
+        gallery: [
+            "./assets/dummy_1.avif",
+            "./assets/dummy_2.avif"
+        ]
     },
     {
         id: 9,
@@ -92,10 +105,16 @@ const memories = [
         title: "Reflection",
         coverColor: "gold",
         coverImage: "./assets/cover_gold.webp",
-        hasPhoto: false,
-        caption: "Looking back at the year. A golden ending to a beautiful chapter."
+        gallery: [
+            "./assets/dummy_1.avif",
+            "./assets/dummy_2.avif"
+        ]
     }
 ];
+
+// Carousel State
+let currentGallery = [];
+let currentGalleryIndex = 0;
 
 const monthNames = [
     "", "January", "February", "March", "April", "May", "June",
@@ -254,30 +273,29 @@ function openDetailModal(memory) {
         coverImage.src = `./assets/cover_${color}.webp`;
     }
 
-    // 7. Inject "Diary Page" Structure (The "Inside")
-    const placeholderUrl = `https://picsum.photos/400/300?random=${memory.id}`;
-    const imgSrc = (memory.hasPhoto && memory.photoSrc) ? memory.photoSrc : placeholderUrl;
+    // 7. Initialize Gallery for horizontal scroll
+    currentGallery = memory.gallery && memory.gallery.length > 0
+        ? memory.gallery
+        : [];
+    currentGalleryIndex = 0;
+
+    // 8. Build AVIF Scrapbook Gallery (Full-page horizontal scroll)
+    let galleryImagesHTML = '';
+    if (currentGallery.length > 0) {
+        currentGallery.forEach((imgPath, index) => {
+            galleryImagesHTML += `<img src="${imgPath}" alt="Scrapbook page ${index + 1}" class="gallery-image">`;
+        });
+    } else {
+        // Fallback if no gallery images
+        galleryImagesHTML = `<div class="gallery-empty">No scrapbook pages available</div>`;
+    }
 
     viewContent.innerHTML = `
-        <div class="diary-entry">
-            <button id="close-btn" class="close-btn">&times;</button>
-            <div class="diary-date">${memory.date || 'Unknown Date'}</div>
-            <div class="diary-photo">
-                <img src="${imgSrc}" alt="${memory.title}" class="diary-img loading">
-            </div>
-            <h3 class="diary-title">${memory.title}</h3>
-            <p class="diary-text">${memory.caption}</p>
+        <button id="close-btn" class="close-btn">&times;</button>
+        <div class="gallery-container">
+            ${galleryImagesHTML}
         </div>
     `;
-
-    // 8. Async load diary photo too
-    const diaryImg = viewContent.querySelector('.diary-img');
-    if (diaryImg) {
-        diaryImg.onload = () => {
-            diaryImg.classList.remove('loading');
-            diaryImg.classList.add('loaded');
-        };
-    }
 
     // 9. Re-attach Event Listener for the NEW Close Button
     const newCloseBtn = viewContent.querySelector('#close-btn');
@@ -285,7 +303,7 @@ function openDetailModal(memory) {
         newCloseBtn.addEventListener('click', closeModal);
     }
 
-    // 10. Set up flip interaction
+    // 10. Set up flip interaction for cover
     if (coverWrapper) {
         coverWrapper.onclick = (e) => {
             e.stopPropagation();
@@ -306,6 +324,33 @@ function revealContent() {
         viewContent.classList.remove('hidden');
         viewContent.classList.add('show-content');
     }, 500); // Slightly before 600ms to feel responsive
+}
+
+// Carousel Navigation Function
+function navigateCarousel(direction) {
+    if (currentGallery.length <= 1) return;
+
+    // Calculate new index with looping
+    currentGalleryIndex = (currentGalleryIndex + direction + currentGallery.length) % currentGallery.length;
+
+    const carouselImg = document.getElementById('carousel-image');
+    const counter = document.getElementById('carousel-counter');
+
+    if (carouselImg) {
+        // Fade out
+        carouselImg.classList.remove('loaded');
+        carouselImg.classList.add('loading');
+
+        // Change image source
+        setTimeout(() => {
+            carouselImg.src = currentGallery[currentGalleryIndex];
+        }, 150);
+    }
+
+    // Update counter
+    if (counter) {
+        counter.textContent = `${currentGalleryIndex + 1} / ${currentGallery.length}`;
+    }
 }
 
 // 3. Navigation Functions

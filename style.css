@@ -570,3 +570,158 @@ html {
         font-size: 1rem;
     }
 }
+
+/* === Multi-Image Carousel === */
+.diary-photo-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+    background: rgba(139, 94, 60, 0.8);
+    border: none;
+    color: #FDFBF7;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Times New Roman', serif;
+    line-height: 1;
+}
+
+.carousel-btn:hover {
+    background: rgba(139, 94, 60, 1);
+    transform: scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: scale(0.95);
+}
+
+.carousel-prev {
+    padding-right: 2px;
+}
+
+.carousel-next {
+    padding-left: 2px;
+}
+
+/* Carousel Counter */
+.carousel-counter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: #8B5E3C;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* Carousel Hint Text */
+.carousel-hint {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    color: rgba(139, 94, 60, 0.6);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+/* Make the photo clickable for next */
+.diary-photo-carousel .diary-photo {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.diary-photo-carousel .diary-photo:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+/* Smoother image transitions */
+.diary-photo-carousel .diary-img {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.diary-photo-carousel .diary-img.loading {
+    opacity: 0;
+}
+
+.diary-photo-carousel .diary-img.loaded {
+    opacity: 1;
+}
+
+/* Mobile adjustments for carousel */
+@media (max-width: 480px) {
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.6rem;
+    }
+
+    .carousel-counter {
+        font-size: 0.9rem;
+    }
+
+    .carousel-hint {
+        font-size: 0.75rem;
+    }
+}
+
+/* === AVIF Scrapbook Gallery (Horizontal Scroll-Snap) === */
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    width: 100%;
+    /* Hide scrollbar for cleaner look */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-image {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    object-fit: contain;
+    /* Show full scrapbook page including handwriting */
+    background-color: #1a1a1a;
+    /* Dark background for letterboxing */
+}
+
+/* Fallback for empty gallery */
+.gallery-empty {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8B5E3C;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    background-color: #FDFBF7;
+}
