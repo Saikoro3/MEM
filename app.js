@@ -54,37 +54,71 @@ const memories = [
     {
         id: 5,
         month: 8,
-        date: "August 12, 2025",
-        title: "Earth & Sky",
+        date: "August 25",
+        title: "Atami",
         coverColor: "brown",
         coverImage: "./assets/cover_brown.webp",
         gallery: [
-            "./assets/dummy_1.avif",
-            "./assets/dummy_2.avif"
+            "./assets/memories/0825_atami/0825-1.avif",
+            "./assets/memories/0825_atami/0825-2.avif",
+            "./assets/memories/0825_atami/0825-3.avif",
+            "./assets/memories/0825_atami/0825-4.avif",
+            "./assets/memories/0825_atami/0825-5.avif",
+            "./assets/memories/0825_atami/0825-6.avif",
+            "./assets/memories/0825_atami/0825-7.avif",
+            "./assets/memories/0825_atami/0825-8.avif",
+            "./assets/memories/0825_atami/0825-9.avif",
+            "./assets/memories/0825_atami/0825-10.avif",
+            "./assets/memories/0825_atami/0825-11.avif",
+            "./assets/memories/0825_atami/0825-12.avif",
+            "./assets/memories/0825_atami/0825-13.avif",
+            "./assets/memories/0825_atami/0825-14.avif",
+            "./assets/memories/0825_atami/0825-15.avif"
         ]
     },
     {
         id: 6,
         month: 9,
-        date: "Sept 23, 2025",
-        title: "Growth",
+        date: "September 3",
+        title: "Machida",
         coverColor: "green",
         coverImage: "./assets/cover_green.webp",
         gallery: [
-            "./assets/dummy_1.avif",
-            "./assets/dummy_2.avif"
+            "./assets/memories/0903_machida/0903-1.avif",
+            "./assets/memories/0903_machida/0903-2.avif",
+            "./assets/memories/0903_machida/0903-3.avif",
+            "./assets/memories/0903_machida/0903-4.avif",
+            "./assets/memories/0903_machida/0903-5.avif",
+            "./assets/memories/0903_machida/0903-6.avif"
         ]
     },
     {
         id: 7,
         month: 10,
-        date: "Oct 31, 2025",
-        title: "Deep Dive",
+        date: "October 29",
+        title: "Ebina",
         coverColor: "blue",
         coverImage: "./assets/cover_blue.webp",
         gallery: [
-            "./assets/dummy_1.avif",
-            "./assets/dummy_2.avif"
+            "./assets/memories/1029_ebina/1029-1.avif",
+            "./assets/memories/1029_ebina/1029-2.avif",
+            "./assets/memories/1029_ebina/1029-3.avif",
+            "./assets/memories/1029_ebina/1029-4.avif",
+            "./assets/memories/1029_ebina/1029-5.avif",
+            "./assets/memories/1029_ebina/1029-6.avif"
+        ]
+    },
+    {
+        id: 10,
+        month: 11,
+        date: "November 3",
+        title: "Machida",
+        coverColor: "purple",
+        coverImage: "./assets/cover_purple.webp",
+        gallery: [
+            "./assets/memories/1103_matchida/1103-1.avif",
+            "./assets/memories/1103_matchida/1103-2.avif",
+            "./assets/memories/1103_matchida/1103-3.avif"
         ]
     },
     {
