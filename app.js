@@ -11,7 +11,8 @@ const memories = [
         coverImage: "./assets/cover_purple.webp",
         gallery: [
             "./assets/dummy_1.avif",
-            "./assets/dummy_2.avif"
+            "./assets/dummy_2.avif",
+            "./assets/dummy_3.avif"
         ]
     },
     {
