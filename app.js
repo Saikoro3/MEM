@@ -90,25 +90,42 @@ const memories = [
     {
         id: 8,
         month: 11,
-        date: "Nov 28, 2025",
-        title: "Gratitude",
+        date: "November 9",
+        title: "Ebina Date",
         coverColor: "purple",
         coverImage: "./assets/cover_purple.webp",
         gallery: [
-            "./assets/dummy_1.avif",
-            "./assets/dummy_2.avif"
+            "./assets/memories/1109_ebina/1109-1.avif",
+            "./assets/memories/1109_ebina/1109-2.avif",
+            "./assets/memories/1109_ebina/1109-3.avif",
+            "./assets/memories/1109_ebina/1109-4.avif"
         ]
     },
     {
         id: 9,
         month: 12,
-        date: "Dec 25, 2025",
-        title: "Reflection",
+        date: "December 7",
+        title: "Okutama Adventure",
         coverColor: "gold",
         coverImage: "./assets/cover_gold.webp",
         gallery: [
-            "./assets/dummy_1.avif",
-            "./assets/dummy_2.avif"
+            "./assets/memories/1207_okutama/1207-1.avif",
+            "./assets/memories/1207_okutama/1207-2.avif",
+            "./assets/memories/1207_okutama/1207-3.avif",
+            "./assets/memories/1207_okutama/1207-4.avif",
+            "./assets/memories/1207_okutama/1207-5.avif",
+            "./assets/memories/1207_okutama/1207-6.avif",
+            "./assets/memories/1207_okutama/1207-7.avif",
+            "./assets/memories/1207_okutama/1207-8.avif",
+            "./assets/memories/1207_okutama/1207-9.avif",
+            "./assets/memories/1207_okutama/1207-10.avif",
+            "./assets/memories/1207_okutama/1207-11.avif",
+            "./assets/memories/1207_okutama/1207-12.avif",
+            "./assets/memories/1207_okutama/1207-13.avif",
+            "./assets/memories/1207_okutama/1207-14.avif",
+            "./assets/memories/1207_okutama/1207-15.avif",
+            "./assets/memories/1207_okutama/1207-16.avif",
+            "./assets/memories/1207_okutama/1207-17.avif"
         ]
     }
 ];
