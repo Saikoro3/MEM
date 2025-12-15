@@ -18,13 +18,19 @@ const memories = [
     {
         id: 2,
         month: 5,
-        date: "May 15, 2025",
-        title: "Golden Hour",
+        date: "May 7",
+        title: "Manazuru",
         coverColor: "gold",
         coverImage: "./assets/cover_gold.webp",
         gallery: [
-            "./assets/dummy_1.avif",
-            "./assets/dummy_2.avif"
+            "./assets/memories/0507manazuru/0507-1.avif",
+            "./assets/memories/0507manazuru/0507-2.avif",
+            "./assets/memories/0507manazuru/0507-3.avif",
+            "./assets/memories/0507manazuru/0507-4.avif",
+            "./assets/memories/0507manazuru/0507-5.avif",
+            "./assets/memories/0507manazuru/0507-6.avif",
+            "./assets/memories/0507manazuru/0507-7.avif",
+            "./assets/memories/0507manazuru/0507-8.avif"
         ]
     },
     {
@@ -42,13 +48,42 @@ const memories = [
     {
         id: 4,
         month: 7,
-        date: "July 04, 2025",
-        title: "Blossom",
+        date: "July 7",
+        title: "Honatsugi",
         coverColor: "pink",
         coverImage: "./assets/cover_pink.webp",
         gallery: [
-            "./assets/dummy_1.avif",
-            "./assets/dummy_2.avif"
+            "./assets/memories/0707honatsugi/0707-1.avif",
+            "./assets/memories/0707honatsugi/0707-2.avif",
+            "./assets/memories/0707honatsugi/0707-3.avif",
+            "./assets/memories/0707honatsugi/0707-4.avif",
+            "./assets/memories/0707honatsugi/0707-5.avif"
+        ]
+    },
+    {
+        id: 11,
+        month: 8,
+        date: "August 14",
+        title: "Himawari",
+        coverColor: "gold",
+        coverImage: "./assets/cover_gold.webp",
+        gallery: [
+            "./assets/memories/0814himawari/0814-1.avif",
+            "./assets/memories/0814himawari/0814-2.avif",
+            "./assets/memories/0814himawari/0814-3.avif",
+            "./assets/memories/0814himawari/0814-4.avif",
+            "./assets/memories/0814himawari/0814-5.avif",
+            "./assets/memories/0814himawari/0814-6.avif",
+            "./assets/memories/0814himawari/0814-7.avif",
+            "./assets/memories/0814himawari/0814-8.avif",
+            "./assets/memories/0814himawari/0814-9.avif",
+            "./assets/memories/0814himawari/0814-10.avif",
+            "./assets/memories/0814himawari/0814-11.avif",
+            "./assets/memories/0814himawari/0814-12.avif",
+            "./assets/memories/0814himawari/0814-13.avif",
+            "./assets/memories/0814himawari/0814-14.avif",
+            "./assets/memories/0814himawari/0814-15.avif",
+            "./assets/memories/0814himawari/0814-16.avif"
         ]
     },
     {
