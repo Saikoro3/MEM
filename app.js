@@ -34,6 +34,61 @@ const memories = [
         ]
     },
     {
+        id: 12,
+        month: 5,
+        date: "May 12",
+        title: "Enoshima",
+        coverColor: "blue",
+        coverImage: "./assets/cover_blue.webp",
+        gallery: [
+            "./assets/memories/0512_enoshima/0512-1.avif",
+            "./assets/memories/0512_enoshima/0512-2.avif",
+            "./assets/memories/0512_enoshima/0512-3.avif",
+            "./assets/memories/0512_enoshima/0512-4.avif",
+            "./assets/memories/0512_enoshima/0512-5.avif",
+            "./assets/memories/0512_enoshima/0512-6.avif"
+        ]
+    },
+    {
+        id: 13,
+        month: 6,
+        date: "June 8",
+        title: "Sagamiono",
+        coverColor: "green",
+        coverImage: "./assets/cover_green.webp",
+        gallery: [
+            "./assets/memories/0608_sagamiono/0608-1.avif",
+            "./assets/memories/0608_sagamiono/0608-2.avif",
+            "./assets/memories/0608_sagamiono/0608-3.avif",
+            "./assets/memories/0608_sagamiono/0608-4.avif"
+        ]
+    },
+    {
+        id: 14,
+        month: 6,
+        date: "June 15",
+        title: "Ami's Birthday",
+        coverColor: "pink",
+        coverImage: "./assets/cover_pink.webp",
+        gallery: [
+            "./assets/memories/0615_ami'sbirthday/0615-1.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-2.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-3.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-4.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-5.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-6.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-7.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-8.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-9.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-10.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-11.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-12.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-13.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-14.avif",
+            "./assets/memories/0615_ami'sbirthday/0615-15.avif"
+        ]
+    },
+    {
         id: 3,
         month: 6,
         date: "June 21, 2025",
