@@ -304,8 +304,9 @@ html {
     transition: opacity 0.3s ease;
     /* Strict Y-axis scroll lock: the overlay itself never scrolls */
     overflow: hidden;
-    overflow-x: clip;
+    overflow-x: hidden;
     overscroll-behavior: none;
+    overscroll-behavior-x: none;
     touch-action: pan-y;
     box-sizing: border-box;
 }
@@ -333,7 +334,6 @@ html {
     -webkit-backdrop-filter: blur(6px);
     /* Prevent any tiny horizontal overflow from header layout */
     overflow-x: hidden;
-    overflow-x: clip;
 }
 
 .library-header::after {
@@ -384,13 +384,15 @@ html {
     flex: 1 1 auto;
     min-height: 0;
     overflow-y: auto;
-    overflow-x: clip;
+    overflow-x: hidden;
     padding-bottom: 40px;
     align-content: start;
     width: 100%;
     max-width: 100%;
+    min-width: 0;
     box-sizing: border-box;
-    overscroll-behavior: contain none;
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: contain;
     touch-action: pan-y;
 }
 
