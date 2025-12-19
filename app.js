@@ -328,8 +328,8 @@ const memories = [
         month: 8,
         date: "August 25",
         title: "Atami",
-        coverColor: "brown",
-        coverImage: "./assets/cover_brown.webp",
+        coverColor: "purple",
+        coverImage: "./assets/cover_purple.webp",
         gallery: [
             "./assets/memories/0825_atami/0825-1.avif",
             "./assets/memories/0825_atami/0825-2.avif",

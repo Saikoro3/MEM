@@ -13,7 +13,6 @@ const ASSETS_TO_CACHE = [
     './assets/cover_gold.webp',
     './assets/cover_red.webp',
     './assets/cover_pink.webp',
-    './assets/cover_brown.webp',
     './assets/cover_green.webp',
     './assets/cover_blue.webp'
 ];
