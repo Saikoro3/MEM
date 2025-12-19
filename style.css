@@ -211,9 +211,9 @@ html {
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #000000;
-    /* Black */
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    color: #FFFFFF;
+    /* White */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .cover-text h1 {
@@ -407,13 +407,13 @@ html {
 .book-date {
     display: block;
     font-family: 'Times New Roman', serif;
-    color: #000000;
-    /* Black */
+    color: #FFFFFF;
+    /* White */
     font-size: 0.9rem;
     margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .book-title {
