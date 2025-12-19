@@ -5,14 +5,17 @@ const memories = [
     {
         id: 1,
         month: 4,
-        date: "April 10, 2025",
-        title: "The Beginning",
+        date: "April 9",
+        title: "Shibuya",
         coverColor: "purple",
         coverImage: "./assets/cover_purple.webp",
         gallery: [
-            "./assets/dummy_1.avif",
-            "./assets/dummy_2.avif",
-            "./assets/dummy_3.avif"
+            "./assets/memories/0409_shibuya/0409-1.avif",
+            "./assets/memories/0409_shibuya/0409-2.avif",
+            "./assets/memories/0409_shibuya/0409-3.avif",
+            "./assets/memories/0409_shibuya/0409-4.avif",
+            "./assets/memories/0409_shibuya/0409-5.avif",
+            "./assets/memories/0409_shibuya/0409-6.avif"
         ]
     },
     {
@@ -29,6 +32,19 @@ const memories = [
             "./assets/memories/0418_tamachi/0418-4.avif",
             "./assets/memories/0418_tamachi/0418-5.avif",
             "./assets/memories/0418_tamachi/0418-6.avif"
+        ]
+    },
+    {
+        id: 24,
+        month: 4,
+        date: "April 21",
+        title: "Tukimino",
+        coverColor: "blue",
+        coverImage: "./assets/cover_blue.webp",
+        gallery: [
+            "./assets/memories/0421_tukimino/0421-1.avif",
+            "./assets/memories/0421_tukimino/0421-2.avif",
+            "./assets/memories/0421_tukimino/0421-3.avif"
         ]
     },
     {
@@ -55,6 +71,20 @@ const memories = [
             "./assets/memories/0430_ebina/0430-2.avif",
             "./assets/memories/0430_ebina/0430-3.avif",
             "./assets/memories/0430_ebina/0430-4.avif"
+        ]
+    },
+    {
+        id: 25,
+        month: 4,
+        date: "April",
+        title: "Ebina",
+        coverColor: "green",
+        coverImage: "./assets/cover_green.webp",
+        gallery: [
+            "./assets/memories/04_ebina/04-1.avif",
+            "./assets/memories/04_ebina/04-2.avif",
+            "./assets/memories/04_ebina/04-3.avif",
+            "./assets/memories/04_ebina/04-4.avif"
         ]
     },
     {
@@ -213,15 +243,32 @@ const memories = [
         ]
     },
     {
-        id: 3,
+        id: 26,
         month: 6,
-        date: "June 21, 2025",
-        title: "Passion",
+        date: "June 25",
+        title: "Machida",
         coverColor: "red",
         coverImage: "./assets/cover_red.webp",
         gallery: [
-            "./assets/dummy_1.avif",
-            "./assets/dummy_2.avif"
+            "./assets/memories/0625_machida/0625-1.avif",
+            "./assets/memories/0625_machida/0625-2.avif",
+            "./assets/memories/0625_machida/0625-3.avif",
+            "./assets/memories/0625_machida/0625-4.avif",
+            "./assets/memories/0625_machida/0625-5.avif"
+        ]
+    },
+    {
+        id: 27,
+        month: 6,
+        date: "June 30",
+        title: "Kamakura",
+        coverColor: "purple",
+        coverImage: "./assets/cover_purple.webp",
+        gallery: [
+            "./assets/memories/0630_kamakura/0630-1.avif",
+            "./assets/memories/0630_kamakura/0630-2.avif",
+            "./assets/memories/0630_kamakura/0630-3.avif",
+            "./assets/memories/0630_kamakura/0630-4.avif"
         ]
     },
     {
@@ -237,6 +284,17 @@ const memories = [
             "./assets/memories/0707honatsugi/0707-3.avif",
             "./assets/memories/0707honatsugi/0707-4.avif",
             "./assets/memories/0707honatsugi/0707-5.avif"
+        ]
+    },
+    {
+        id: 28,
+        month: 7,
+        date: "July 27",
+        title: "Sagamiono",
+        coverColor: "gold",
+        coverImage: "./assets/cover_gold.webp",
+        gallery: [
+            "./assets/memories/0727_sagamiono/0727-1.avif"
         ]
     },
     {
@@ -291,6 +349,29 @@ const memories = [
         ]
     },
     {
+        id: 29,
+        month: 8,
+        date: "August 4",
+        title: "Shimokita",
+        coverColor: "blue",
+        coverImage: "./assets/cover_blue.webp",
+        gallery: [
+            "./assets/memories/0804_shimokita/0804-1.avif",
+            "./assets/memories/0804_shimokita/0804-2.avif"
+        ]
+    },
+    {
+        id: 30,
+        month: 8,
+        date: "August 30",
+        title: "Ebina",
+        coverColor: "pink",
+        coverImage: "./assets/cover_pink.webp",
+        gallery: [
+            "./assets/memories/0830_ebina/0830-1.avif"
+        ]
+    },
+    {
         id: 6,
         month: 9,
         date: "September 3",
@@ -304,6 +385,97 @@ const memories = [
             "./assets/memories/0903_machida/0903-4.avif",
             "./assets/memories/0903_machida/0903-5.avif",
             "./assets/memories/0903_machida/0903-6.avif"
+        ]
+    },
+    {
+        id: 31,
+        month: 9,
+        date: "September 19",
+        title: "Shimokita",
+        coverColor: "gold",
+        coverImage: "./assets/cover_gold.webp",
+        gallery: [
+            "./assets/memories/0919_shimokita/0919-1.avif"
+        ]
+    },
+    {
+        id: 32,
+        month: 9,
+        date: "September 21",
+        title: "GraPa",
+        coverColor: "purple",
+        coverImage: "./assets/cover_purple.webp",
+        gallery: [
+            "./assets/memories/0921_grapa/0921-1.avif",
+            "./assets/memories/0921_grapa/0921-2.avif",
+            "./assets/memories/0921_grapa/0921-3.avif",
+            "./assets/memories/0921_grapa/0921-4.avif"
+        ]
+    },
+    {
+        id: 33,
+        month: 9,
+        date: "September 30",
+        title: "Yokohama",
+        coverColor: "red",
+        coverImage: "./assets/cover_red.webp",
+        gallery: [
+            "./assets/memories/0930_yokohama/0930-1.avif",
+            "./assets/memories/0930_yokohama/0930-2.avif",
+            "./assets/memories/0930_yokohama/0930-3.avif"
+        ]
+    },
+    {
+        id: 34,
+        month: 10,
+        date: "October 5",
+        title: "Machida",
+        coverColor: "green",
+        coverImage: "./assets/cover_green.webp",
+        gallery: [
+            "./assets/memories/1005_machida/1005-1.avif"
+        ]
+    },
+    {
+        id: 35,
+        month: 10,
+        date: "October 11",
+        title: "Shimokita",
+        coverColor: "pink",
+        coverImage: "./assets/cover_pink.webp",
+        gallery: [
+            "./assets/memories/1011_shimokita/1011-1.avif",
+            "./assets/memories/1011_shimokita/1011-2.avif",
+            "./assets/memories/1011_shimokita/1011-3.avif",
+            "./assets/memories/1011_shimokita/1011-4.avif",
+            "./assets/memories/1011_shimokita/1011-5.avif",
+            "./assets/memories/1011_shimokita/1011-6.avif"
+        ]
+    },
+    {
+        id: 36,
+        month: 10,
+        date: "October 19",
+        title: "Yamato",
+        coverColor: "gold",
+        coverImage: "./assets/cover_gold.webp",
+        gallery: [
+            "./assets/memories/1019_yamato/1019-1.avif",
+            "./assets/memories/1019_yamato/1019-2.avif",
+            "./assets/memories/1019_yamato/1019-3.avif"
+        ]
+    },
+    {
+        id: 37,
+        month: 10,
+        date: "October 22",
+        title: "Mizonokuchi",
+        coverColor: "blue",
+        coverImage: "./assets/cover_blue.webp",
+        gallery: [
+            "./assets/memories/1022_mizonokuchi/1022-1.avif",
+            "./assets/memories/1022_mizonokuchi/1022-2.avif",
+            "./assets/memories/1022_mizonokuchi/1022-3.avif"
         ]
     },
     {
@@ -347,6 +519,31 @@ const memories = [
             "./assets/memories/1109_ebina/1109-2.avif",
             "./assets/memories/1109_ebina/1109-3.avif",
             "./assets/memories/1109_ebina/1109-4.avif"
+        ]
+    },
+    {
+        id: 38,
+        month: 11,
+        date: "November 25",
+        title: "Machida",
+        coverColor: "gold",
+        coverImage: "./assets/cover_gold.webp",
+        gallery: [
+            "./assets/memories/1125_machida/1125-1.avif",
+            "./assets/memories/1125_machida/1125-2.avif",
+            "./assets/memories/1125_machida/1125-3.avif"
+        ]
+    },
+    {
+        id: 39,
+        month: 11,
+        date: "November 27",
+        title: "Tamaplaza",
+        coverColor: "red",
+        coverImage: "./assets/cover_red.webp",
+        gallery: [
+            "./assets/memories/1127_tamaplaza/1127-1.avif",
+            "./assets/memories/1127_tamaplaza/1127-2.avif"
         ]
     },
     {
