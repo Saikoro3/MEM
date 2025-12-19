@@ -304,10 +304,13 @@ html {
     flex-direction: column;
     padding: 20px;
     transition: opacity 0.3s ease;
-    overflow-x: hidden;
+    /* Strict Y-axis scroll lock */
+    overflow-x: hidden !important;
     overflow-y: auto;
     overscroll-behavior: none;
     overscroll-behavior-x: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
     box-sizing: border-box;
 }
 
@@ -359,14 +362,15 @@ html {
     grid-template-columns: repeat(2, 1fr);
     /* 2 cols on mobile */
     gap: 20px;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow-y: visible;
+    overflow-x: hidden !important;
     padding-bottom: 40px;
     align-content: start;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     overscroll-behavior-x: none;
+    touch-action: pan-y;
 }
 
 @media (min-width: 600px) {
