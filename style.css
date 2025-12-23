@@ -18,6 +18,7 @@ html {
     font-family: 'Times New Roman', serif;
     overscroll-behavior: none;
     overscroll-behavior-x: none;
+    background-color: #2c1e1e;
 }
 
 /* Container */
@@ -49,7 +50,7 @@ html {
     top: 0;
     left: 0;
     /* Adjustments for shelf alignment */
-    padding: 60px 20px 40px 20px;
+    padding: 60px 20px calc(40px + env(safe-area-inset-bottom)) 20px;
     /* Top padding to push books down from top frame, Side padding */
     row-gap: 25px;
     /* Vertical gap for shelf thickness */
@@ -310,7 +311,7 @@ html {
     /* Above bookshelf, below modal */
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 20px calc(20px + env(safe-area-inset-bottom)) 20px;
     transition: opacity 0.3s ease;
     /* Strict Y-axis scroll lock: the overlay itself never scrolls */
     overflow: hidden;
