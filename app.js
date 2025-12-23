@@ -491,6 +491,7 @@ const memories = [
             "./assets/memories/1029_ebina/1029-3.avif",
             "./assets/memories/1029_ebina/1029-4.avif",
             "./assets/memories/1029_ebina/1029-5.avif",
+            "./assets/memories/1029_ebina/1029-6.avif",
             "./assets/memories/1029_ebina/1029-7.avif",
             "./assets/memories/1029_ebina/1029-8.avif"
         ]
