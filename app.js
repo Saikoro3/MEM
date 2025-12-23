@@ -148,10 +148,7 @@ const memories = [
             "./assets/memories/0512_enoshima/0512-3.avif",
             "./assets/memories/0512_enoshima/0512-4.avif",
             "./assets/memories/0512_enoshima/0512-5.avif",
-            "./assets/memories/0512_enoshima/0512-6.avif",
-            "./assets/memories/0512_enoshima/IMG_7500.JPG",
-            "./assets/memories/0512_enoshima/IMG_7501.JPG",
-            "./assets/memories/0512_enoshima/IMG_7502.JPG"
+            "./assets/memories/0512_enoshima/0512-6.avif"
         ]
     },
     {
