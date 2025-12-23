@@ -15,7 +15,8 @@ const memories = [
             "./assets/memories/0307_cosmos/0307-3.avif",
             "./assets/memories/0307_cosmos/0307-4.avif",
             "./assets/memories/0307_cosmos/0307-5.avif",
-            "./assets/memories/0307_cosmos/0307-8.avif"
+            "./assets/memories/0307_cosmos/0307-6.avif",
+            "./assets/memories/0307_cosmos/0307-7.avif",
         ]
     },
     {
