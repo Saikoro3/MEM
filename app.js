@@ -491,7 +491,8 @@ const memories = [
             "./assets/memories/1029_ebina/1029-3.avif",
             "./assets/memories/1029_ebina/1029-4.avif",
             "./assets/memories/1029_ebina/1029-5.avif",
-            "./assets/memories/1029_ebina/1029-6.avif"
+            "./assets/memories/1029_ebina/1029-7.avif",
+            "./assets/memories/1029_ebina/1029-8.avif"
         ]
     },
     {
@@ -571,6 +572,54 @@ const memories = [
             "./assets/memories/1207_okutama/1207-15.avif",
             "./assets/memories/1207_okutama/1207-16.avif",
             "./assets/memories/1207_okutama/1207-17.avif"
+        ]
+    },
+    {
+        id: 40,
+        month: 12,
+        date: "December 12",
+        title: "Takanawa",
+        coverColor: "purple",
+        coverImage: "./assets/cover_purple.webp",
+        gallery: [
+            "./assets/memories/1212_takanawa/1212-1.avif",
+            "./assets/memories/1212_takanawa/1212-2.avif",
+            "./assets/memories/1212_takanawa/1212-3.avif",
+            "./assets/memories/1212_takanawa/1212-4.avif",
+            "./assets/memories/1212_takanawa/1212-5.avif",
+            "./assets/memories/1212_takanawa/1212-6.avif",
+            "./assets/memories/1212_takanawa/1212-7.avif",
+            "./assets/memories/1212_takanawa/1212-8.avif"
+        ]
+    },
+    {
+        id: 41,
+        month: 4,
+        date: "March 7",
+        title: "Cosmos",
+        coverColor: "pink",
+        coverImage: "./assets/cover_pink.webp",
+        gallery: [
+            "./assets/memories/0307_cosmos/0307-1.avif",
+            "./assets/memories/0307_cosmos/0307-2.avif",
+            "./assets/memories/0307_cosmos/0307-3.avif",
+            "./assets/memories/0307_cosmos/0307-4.avif",
+            "./assets/memories/0307_cosmos/0307-5.avif",
+            "./assets/memories/0307_cosmos/0307-8.avif"
+        ]
+    },
+    {
+        id: 42,
+        month: 4,
+        date: "March 30",
+        title: "Machida",
+        coverColor: "green",
+        coverImage: "./assets/cover_green.webp",
+        gallery: [
+            "./assets/memories/0330_machida/0330-1.avif",
+            "./assets/memories/0330_machida/0330-2.avif",
+            "./assets/memories/0330_machida/0330-3.avif",
+            "./assets/memories/0330_machida/0330-4.avif"
         ]
     }
 ];
