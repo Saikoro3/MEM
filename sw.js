@@ -1,14 +1,14 @@
 // Service Worker for Our Date Log PWA
 // Version 1.0.0
 
-const CACHE_NAME = 'date-log-v1';
+const CACHE_NAME = 'date-log-v2';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
     './style.css',
     './app.js',
     './manifest.json',
-    './assets/bookshelf_bg.webp',
+    './assets/bookshelf01.webp',
     './assets/cover_purple.webp',
     './assets/cover_gold.webp',
     './assets/cover_red.webp',
