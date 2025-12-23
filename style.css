@@ -28,12 +28,14 @@ html {
     /* Mobile viewport height */
     background-color: #2c1e1e;
     /* Dark magical fallback */
-    background-image: url('./assets/bookshelf_bg.webp');
+    background-image: url('./assets/bookshelf01.webp');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    /* Ensure no scrollbars from background */
 }
 
 /* Grid Overlay */
@@ -46,6 +48,14 @@ html {
     position: absolute;
     top: 0;
     left: 0;
+    /* Adjustments for shelf alignment */
+    padding: 60px 20px 40px 20px;
+    /* Top padding to push books down from top frame, Side padding */
+    row-gap: 25px;
+    /* Vertical gap for shelf thickness */
+    column-gap: 10px;
+    /* Slight horizontal gap */
+    box-sizing: border-box;
 }
 
 /* Grid Item (Invisible Button) */
@@ -292,7 +302,7 @@ html {
     width: 100%;
     max-width: 100%;
     background-color: #2c1e1e;
-    background-image: url('./assets/bookshelf_bg.webp');
+    background-image: url('./assets/bookshelf01.webp');
     /* Reuse background for consistency */
     background-size: cover;
     background-position: center;
@@ -443,7 +453,8 @@ html {
     text-align: center;
     padding: 10px;
     /* Optional: Overlay gradient for text readability if covers are busy */
-    /* background: rgba(0,0,0,0.2); */
+    background: rgba(0, 0, 0, 0.25);
+    /* Subtle dim for legibility */
 }
 
 .book-date {
